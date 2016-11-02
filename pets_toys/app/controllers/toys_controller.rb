@@ -5,5 +5,6 @@ class ToysController < ApplicationController
 		@toys = @pet.toys
 		render json: {message: @toys}
 	end 
+
   
 end
