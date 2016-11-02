@@ -1,6 +1,6 @@
 <h1>WOW. PETS!</h1>
 <ul id="pets-list">
 	<% @pets.each do |pet| %>
-		<%= link_to pet.name, pet_toys_path(pet), remote: true, :id => "pet-link"%>
+		<li><%= link_to pet.name, pet_toys_path(pet), remote: true, :id => "pet-link"%></li>
 	<%end%>
 </ul>

@@ -1,15 +1,13 @@
 $(document).on("turbolinks:load", function(){
 
-  $('#pet_link').on('ajax:success', function(event, response) {
-    $('#new_stuff_path').toggle();
-    $('#results-div').append(response);i
+  $('#pets-list').on("click", "a", function(event){
+    event.preventDefault();
+
+    $.ajax({
+    method: 'get',
+    url: $(this).attr('href')
+    }).done(function(response){
+      console.log(response)
+    })
   })
-  // $.ajax({
-  //   url: '/stuffs',
-  //   method: 'post',
-  //   data: $(this).serialize()
-  // }).done(function(response)) {
-  //    console.log(response)
-  //   }
-  // })
 });

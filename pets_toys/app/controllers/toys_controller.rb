@@ -6,5 +6,4 @@ class ToysController < ApplicationController
 		render json: {message: @toys}
 	end 
 
-  
 end
